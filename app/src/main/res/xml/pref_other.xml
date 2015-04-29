@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_header_other"
+        android:key="pref_key_other_settings">
+        <SwitchPreference
+            android:textSize="12sp"
+            android:key="pref_enable_shake_reset"
+            android:title="@string/pref_enable_shake"
+            android:defaultValue="false"
+            android:summary="The bill will be set to 0 when you shake your phone"/>
+    </PreferenceCategory>
+</PreferenceScreen>

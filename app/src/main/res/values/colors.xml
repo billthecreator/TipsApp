@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Indigo-->
+    <!--<color name="primaryColorLight">#5C6BC0</color>-->
+    <!--<color name="primaryColor">#3F51B5</color>-->
+    <!--<color name="primaryColorText">#FFFFFF</color>-->
+    <!--<color name="primaryColorDark">#303F9F</color>-->
+    <!--<color name="accentColor">#FF4081</color>-->
+
+
+    <!--<color name="primaryColorLight">#C8E6C9</color> // 300-->
+    <!--<color name="primaryColor">#4CAF50</color> // 500-->
+    <!--<color name="primaryColorDark">#388E3C</color> // 700-->
+    <!--<color name="accentColor">#FF5722</color> // A200-->
+
+    <!--<color name="primaryColorLight">#AED581</color> // 300-->
+    <!--<color name="primaryColor">#8BC34A</color> // 500-->
+    <!--<color name="secondaryColor">#8BC34A</color> // 500-->
+    <!--<color name="primaryColorDark">#689F38</color> // 700-->
+    <!--<color name="accentColor">#FF5252</color> // A200-->
+
+    <color name="primaryColorLight">#81C784</color> // 300
+    <color name="primaryColor">#4CAF50</color> // 500
+    <color name="secondaryColor">#4CAF50</color> // 500
+    <color name="primaryColorDark">#388E3C</color> // 700
+    <color name="accentColor">#FF5252</color> // A200
+
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#727272</color>
+
+    <color name="windowBackground">#EEEEEE</color>
+    <color name="navigationBarColor">@color/primaryColor</color>
+    
+    <color name="iconColor">#89000000</color>
+    <color name="dividerColor">#15000000</color>
+    <color name="hintTextColor">#42000000</color>
+    <color name="textColor">#dd000000</color>
+
+    <color name="white">#fff</color>
+
+    <color name="primaryColorText">@color/primaryText</color>
+    <color name="primaryColorTextAlpha">#80ffffff</color>
+
+
+</resources>

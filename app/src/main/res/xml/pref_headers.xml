@@ -1,0 +1,21 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.billthecreator.tips.serviceSettings$ServicesFragment"
+        android:title="@string/pref_header_services" />
+    <!--<header-->
+        <!--android:fragment="com.billthecreator.tips.serviceSettings$DataSyncPreferenceFragment"-->
+        <!--android:title="@string/pref_header_data_sync" />-->
+    <!--<header-->
+        <!--android:fragment="com.billthecreator.tips.serviceSettings$GeneralPreferenceFragment"-->
+        <!--android:title="@string/pref_header_general" />-->
+    <!--<header-->
+        <!--android:fragment="com.billthecreator.tips.serviceSettings$NotificationPreferenceFragment"-->
+        <!--android:title="@string/pref_header_notifications" />-->
+    <!--<header-->
+        <!--android:fragment="com.billthecreator.tips.serviceSettings$NotificationPreferenceFragment"-->
+        <!--android:title="@string/pref_header_notifications" />-->
+
+</preference-headers>

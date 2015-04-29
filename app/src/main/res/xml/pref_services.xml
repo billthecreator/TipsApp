@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_header_services"
+        android:key="pref_key_services_settings"
+        android:summary="Set the values of service types">
+
+        <EditTextPreference
+            android:key="bartender_text"
+            android:title="@string/pref_service_bartender"
+            android:defaultValue="@string/pref_service_default_bartender"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="delivery_text"
+            android:title="@string/pref_service_delivery_driver"
+            android:defaultValue="@string/pref_service_default_delivery_driver"
+            android:theme="@style/pref_service_style"/>
+
+        <EditTextPreference
+            android:key="waiter_text"
+            android:title="@string/pref_service_waiter"
+            android:defaultValue="@string/pref_service_default_waiter"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="cab_driver_text"
+            android:title="@string/pref_service_cab_driver"
+            android:defaultValue="@string/pref_service_default_cab_driver"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="chauffeur_text"
+            android:title="@string/pref_service_chauffeur"
+            android:defaultValue="@string/pref_service_default_chauffeur"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="hairdresser_text"
+            android:title="@string/pref_service_hairdresser"
+            android:defaultValue="@string/pref_service_default_hairdresser"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="manicurist_text"
+            android:title="@string/pref_service_manicurist"
+            android:defaultValue="@string/pref_service_default_manicurist"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="spa_text"
+            android:title="@string/pref_service_spa_service"
+            android:defaultValue="@string/pref_service_default_spa_service"
+            android:theme="@style/pref_service_style" />
+
+        <EditTextPreference
+            android:key="masseuse_text"
+            android:title="@string/pref_service_masseuse"
+            android:defaultValue="@string/pref_service_default_masseuse"
+            android:theme="@style/pref_service_style" />
+
+        <!--<Preference-->
+            <!--android:key="@string/pref_service_reset"-->
+            <!--android:title="Reset services to default values"-->
+            <!--android:summary="Reset to default" />-->
+
+
+
+    </PreferenceCategory>
+</PreferenceScreen>

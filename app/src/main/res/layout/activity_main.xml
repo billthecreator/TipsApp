@@ -1,0 +1,520 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main"
+    android:background="@color/primary_material_light"
+    android:theme="@style/AppTheme">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/app_bar"></include>
+
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="0dp">
+
+
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@color/secondaryColor"
+            android:padding="16dp"
+            android:id="@+id/outputArea">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Tip amount"
+                            android:id="@+id/tipAmountTextHeader"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/caption"
+                            android:gravity="left|right|top"
+                            android:layout_gravity="left|right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Total amount"
+                            android:id="@+id/totalAmountTextHeader"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/caption"
+                            android:gravity="right|top"
+                            android:layout_gravity="right" />
+
+                    </GridLayout>
+                </TableRow>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="$0.00"
+                            android:id="@+id/totalAmount"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/display1"
+                            android:gravity="right|top"
+                            android:layout_gravity="left|right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="$0.00"
+                            android:id="@+id/tipAmount"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:textSize="@dimen/display1"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:singleLine="true"
+                            android:elegantTextHeight="true"
+                            android:gravity="left|top"
+                            android:layout_gravity="left" />
+                    </GridLayout>
+                </TableRow>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/tipPercentRoundedTextView"
+                        android:textSize="@dimen/body2"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:gravity="left|top"
+                        android:layout_gravity="left" />
+
+                </GridLayout>
+            </FrameLayout>
+
+        </TableLayout>
+
+
+
+        <TableLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:animateLayoutChanges="true"
+            android:id="@+id/inputArea">
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/scrollView"
+                android:background="@color/background_material_light"
+                android:paddingBottom="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardHolder">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/card_height_small"
+                            android:layout_gravity="center_vertical"
+                            android:background="#eaeaea"
+                            android:rowCount="2">
+
+                            <view
+                                class="android.support.v7.widget.SwitchCompat"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/roundSwitch"
+                                android:text="Round Total Up"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:textSize="@dimen/body1"
+                                android:textStyle="normal"
+                                android:textColor="#757575" />
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+
+                        <View style="@style/Divider" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/billcard">
+
+                            <GridLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+
+                                android:background="@color/cardview_light_background"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp">
+
+                                <FrameLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="@dimen/card_height"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Bill amount"
+                                        android:id="@+id/billAmountTextView"
+                                        android:layout_column="0"
+                                        android:textColor="@color/textColor"
+                                        android:fontFamily="Roboto Regular"
+                                        android:paddingLeft="0dp"
+                                        android:textSize="@dimen/body2"
+                                        android:layout_columnSpan="1"
+                                        android:layout_row="0"
+                                        android:layout_gravity="left"
+                                        android:gravity="center_vertical|left" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="@dimen/card_height"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="$0.00"
+                                        android:id="@+id/billTextView"
+                                        android:layout_gravity="center_vertical|right"
+                                        android:gravity="center_vertical|right"
+                                        android:textColor="@color/primaryColor"
+                                        android:textSize="@dimen/title"
+                                         />
+
+                                    <EditText
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/totalTextBox"
+                                        android:inputType="number|numberDecimal"
+                                        android:textColor="@color/textColor"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/body2"
+                                        android:textColorHint="@color/hintTextColor"
+                                        android:selectAllOnFocus="false"
+                                        android:hint="$0.00"
+                                        android:fontFamily=""
+                                        android:digits=".0123456789"
+                                        android:visibility="invisible"
+                                        android:layout_gravity="right|center_vertical"
+                                        android:gravity="right" />
+
+                                </FrameLayout>
+
+                            </GridLayout>
+
+
+                        </LinearLayout>
+
+                        <View style="@style/Divider" >
+                        </View>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:columnOrderPreserved="true"
+                                android:focusable="false"
+                                android:id="@+id/gridLayout2"
+                                android:useDefaultMargins="false"
+                                android:background="@color/cardview_light_background"
+                                android:rowCount="2"
+                                android:columnCount="1" >
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:layout_column="0"
+                                    android:layout_columnSpan="1"
+                                    android:layout_gravity="fill_horizontal|right"
+                                    android:layout_row="1" >
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="@dimen/card_height"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Service type"
+                                        android:id="@+id/serviceType"
+                                        android:layout_column="0"
+                                        android:textColor="@color/textColor"
+                                        android:paddingLeft="0dp"
+                                        android:textSize="@dimen/body2"
+                                        android:layout_columnSpan="1"
+                                        android:layout_row="0"
+                                        android:layout_gravity="left"
+                                        android:gravity="center_vertical|left" />
+
+                                    <Spinner
+                                        android:layout_width="wrap_content"
+                                        android:minWidth="168dp"
+                                        android:layout_gravity="right"
+                                        android:textSize="@dimen/body2"
+                                        android:gravity="right"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/servicesSpinner"
+                                        android:prompt="@string/servicePrompt" />
+
+                                </FrameLayout>
+                            </GridLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:columnOrderPreserved="true"
+                                android:focusable="false"
+                                android:id="@+id/tipCard"
+                                android:useDefaultMargins="false"
+                                android:background="@color/cardview_light_background"
+                                android:rowCount="2"
+                                android:columnCount="1">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:padding="0dp"
+                                    android:layout_column="0"
+                                    android:layout_columnSpan="1"
+                                    android:layout_gravity="fill_horizontal"
+                                    android:layout_row="1">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="@dimen/card_height"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Tip percent"
+                                        android:id="@+id/tipAmountTextView"
+                                        android:layout_column="0"
+                                        android:textColor="@color/textColor"
+                                        android:paddingLeft="0dp"
+                                        android:textSize="@dimen/body2"
+                                        android:layout_columnSpan="1"
+                                        android:layout_row="0"
+                                        android:layout_gravity="left"
+                                        android:gravity="center_vertical|left" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="@dimen/card_height"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="0%"
+                                        android:id="@+id/tipTextView"
+                                        android:layout_gravity="center_vertical|right"
+                                        android:gravity="center_vertical|right"
+                                        android:textColor="@color/iconColor"
+                                        android:textSize="@dimen/title"
+                                        />
+
+                                    <EditText
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right|center_vertical"
+                                        android:id="@+id/tipPercentAmount"
+                                        android:gravity="right"
+                                        android:inputType="number|numberDecimal"
+                                        android:textColor="@color/textColor"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/body2"
+                                        android:textColorHint="@color/hintTextColor"
+                                        android:selectAllOnFocus="false"
+                                        android:hint="20%"
+                                        android:visibility="invisible"
+                                        android:digits="0123456789" />
+
+
+                                </FrameLayout>
+
+                            </GridLayout>
+
+                        </LinearLayout>
+
+                        <View style="@style/Divider" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:columnOrderPreserved="true"
+                                android:background="@color/cardview_light_background"
+                                android:focusable="false"
+                                android:id="@+id/splitCard"
+                                android:useDefaultMargins="false"
+                                android:rowCount="2"
+                                android:columnCount="2">
+
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|right"
+                                    android:layout_row="0"
+                                    android:layout_column="1">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/card_height_small"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="$0.00"
+                                        android:layout_gravity="top|left"
+                                        android:gravity="center_vertical|right"
+                                        android:textColor="@color/iconColor"
+                                        android:textSize="@dimen/title"
+                                        android:id="@+id/billSplitTextView" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_row="0"
+                                    android:layout_column="0">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/card_height_small"
+                                        android:text="1 person"
+                                        android:id="@+id/numPeopleHeader"
+                                        android:textColor="@color/textColor"
+                                        android:textSize="@dimen/body2"
+                                        android:layout_gravity="left"
+                                        android:gravity="center|left" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|right"
+                                    android:layout_row="1"
+                                    android:layout_column="0"
+                                    android:layout_columnSpan="2">
+
+                                    <SeekBar
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_gravity="right"
+                                        android:id="@+id/seekBar"
+                                        android:max="9"
+                                        android:paddingBottom="8dp"
+                                        android:paddingTop="8dp"
+                                        android:splitTrack="true"
+                                        android:progress="0" />
+                                </FrameLayout>
+
+                            </GridLayout>
+
+                        </LinearLayout>
+
+                        <View style="@style/Divider" />
+
+
+                    </LinearLayout>
+
+                </TableLayout>
+            </ScrollView>
+        </TableLayout>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

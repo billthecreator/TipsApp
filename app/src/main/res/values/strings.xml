@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TIP$</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_donate">Donate</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_help">Help</string>
+    <string name="action_check_updates">Check for Updates</string>
+    <string name="action_changeColor">Change Color</string>
+    <string name="title_activity_change_color">changeColor</string>
+    <string name="action_clear">Reset</string>
+    <string name="title_activity_temp">temp</string>
+    <string name="action_newLook">new look</string>
+    <string name="title_activity_service_type">serviceType</string>
+    <string name="servicePrompt">Choose a service type</string>
+    <string name="pref_header_other">Other</string>
+    <string name="pref_enable_shake">Shake to erase</string>
+    <string name="pref_service_reset">pref_service_reset</string>
+
+</resources>
